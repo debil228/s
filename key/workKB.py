@@ -1,0 +1,25 @@
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
+
+b1 = KeyboardButton('/weather')
+b2 = KeyboardButton('/violetta')
+b3 = KeyboardButton('/Использовать_GPT')
+bv = KeyboardButton('1')
+bv2 = KeyboardButton('2')
+bv3 = KeyboardButton('3')
+bv4 = KeyboardButton('4')
+bv5 = KeyboardButton('5')
+bv6 = KeyboardButton('6')
+bv7 = KeyboardButton('7')
+bv8 = KeyboardButton('8')
+bv9 = KeyboardButton('9')
+bv10 = KeyboardButton('10')
+bv_close = KeyboardButton('/закрыть_кнопки')
+gpt_close = KeyboardButton('/перейти_в_меню')
+kb_work = ReplyKeyboardMarkup(resize_keyboard=True)
+kb_work.add(b1,b2).add(b3)
+
+gpt_work = ReplyKeyboardMarkup(resize_keyboard=True)
+gpt_work.add(gpt_close)
+
+violetta_best_button = ReplyKeyboardMarkup(resize_keyboard=True)
+violetta_best_button.insert(bv).insert(bv2).insert(bv3).insert(bv4).insert(bv5).insert(bv6).insert(bv7).insert(bv8).insert(bv9).insert(bv10).insert(bv_close)
