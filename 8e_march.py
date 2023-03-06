@@ -21,22 +21,4 @@ async def start_commads(message: types.Message):
 work_code.commad_register_hendler(dp)
 weather.commad_register_weath(dp)
 
-url_app = 'https://bot.vds47882.ihor.ru'
-
-
-async def on_startup(dp):
-    await bot.set_webhook(url_app)
-
-async def on_shutdown(dp):
-    await bot.delete_webhook()
-
-
-executor.start_webhook(
-    dispatcher = dp,
-    webhook_path='',
-    on_startup=on_startup,
-    on_shutdown=on_shutdown,
-    skip_updates=True,
-    host="0.0.0.0",
-    port=int(os.environ.get("PORT", 22))
-)
+executor.start_polling(dp, skip_updates=True)
