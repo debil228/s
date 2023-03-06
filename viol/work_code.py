@@ -12,7 +12,7 @@ from key import gpt_work
 
 import openai
 
-open_tok = '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'
+open_tok = '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'
 
 openai.api_key = open_tok
 
